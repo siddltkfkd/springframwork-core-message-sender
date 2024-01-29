@@ -5,20 +5,17 @@
        default-init-method="init" default-destroy-method="destroy">
 
 
-    <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.sender.EmailMessageSender"
-          scope="singleton" >
-    </bean>
+<!--    <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.sender.EmailMessageSender"-->
+<!--          scope="singleton" >-->
+<!--    </bean>-->
 
     <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.sender.SmsMessageSender"
           scope="prototype">
     </bean>
 
-<!--    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService">-->
-<!--        <constructor-arg ref="smsMessageSender"/>-->
-<!--    </bean>-->
-
-    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService">
-        <property name="messageSender" ref="emailMessageSender"/>
+<!--    MessageSender 타입이 하나만 있으면 그 타입에 맞는 MessageSender로 자동 주입-->
+    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService"
+            autowire="byType">
     </bean>
 
 </beans>
