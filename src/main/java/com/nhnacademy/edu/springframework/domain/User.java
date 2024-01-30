@@ -1,11 +1,15 @@
 package com.nhnacademy.edu.springframework.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
 public class User {
 	private String email;
+	@Value("${phone}")
 	private String phoneNumber;
-	public User(String email, String phoneNumber){
+
+	public User(String email){
 		this.email = email;
-		this.phoneNumber = phoneNumber;
 	}
 
 	public String getEmail() {
@@ -22,5 +26,10 @@ public class User {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	@Override
+	public String toString(){
+		return "User { email : " + email + ", phoneNumber : " + phoneNumber + " }";
 	}
 }
