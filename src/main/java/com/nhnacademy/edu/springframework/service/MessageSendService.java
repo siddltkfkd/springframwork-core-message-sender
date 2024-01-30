@@ -8,17 +8,14 @@ public class MessageSendService {
 	private MessageSender messageSender;
 
 	public MessageSendService(){}
-
-//	public MessageSendService(MessageSender messageSender){
-//		this.messageSender = messageSender;
-//	}
-//
-	public void doSendMessage(User user, String message){
-		messageSender.sendMessage(user, message);
-	}
-
 	public void setMessageSender(MessageSender messageSender) {
 		System.out.println("set messageSender invoked");
 		this.messageSender = messageSender;
 	}
+
+	public void doSendMessage(User user, String message){
+		messageSender.sendMessage(user, message);
+	}
+
+
 }
