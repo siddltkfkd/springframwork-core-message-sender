@@ -1,15 +1,14 @@
 package com.nhnacademy.edu.springframework.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-
+// user는 bean이 아니라서 여기에 어노테이션을 붙여도 적용이 안된다.
 public class User {
 	private String email;
-	@Value("${phone}")
+
 	private String phoneNumber;
 
-	public User(String email){
+	public User(String email, String phoneNumber){
 		this.email = email;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getEmail() {

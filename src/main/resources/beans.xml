@@ -17,7 +17,7 @@
     </bean>
 
     <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService">
-        <property name="messageSender" ref="emailMessageSender"/>
+        <property name="messageSender" ref="smsMessageSender"/>
     </bean>
 
 </beans>
