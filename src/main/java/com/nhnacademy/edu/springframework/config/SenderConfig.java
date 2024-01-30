@@ -12,12 +12,4 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @ComponentScan(basePackages = "com.nhnacademy.edu.springframework")
 public class SenderConfig {
-	@Bean("smsMessageSender")
-	public MessageSender smsMessageSender() {
-		return new SmsMessageSender();
-	}
-	@Bean("emailMessageSender")
-	public MessageSender emailMessageSender() {
-		return new EmailMessageSender();
-	}
 }

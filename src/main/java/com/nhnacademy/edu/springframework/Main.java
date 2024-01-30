@@ -1,6 +1,7 @@
 package com.nhnacademy.edu.springframework;
 
 import com.nhnacademy.edu.springframework.domain.User;
+import com.nhnacademy.edu.springframework.sender.MessageSender;
 import com.nhnacademy.edu.springframework.service.MessageSendService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,6 +15,7 @@ public class Main {
 		User user = new User("email@naver.com", "010-xxxx-xxxx");
 
 		MessageSendService service = context.getBean("messageSendService", MessageSendService.class);
+		service.setMessageSender(context.getBean("smsMessageSender", MessageSender.class));
 		service.doSendMessage(user, "hi");
 
 	}

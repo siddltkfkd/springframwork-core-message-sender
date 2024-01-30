@@ -10,10 +10,4 @@ import org.springframework.context.annotation.*;
 @ComponentScan(basePackages = "com.nhnacademy.edu.springframework")
 @PropertySource("classpath:user.properties")
 public class ServiceConfig {
-	@Autowired
-	private SenderConfig senderConfig;
-	@Bean
-	public MessageSendService messageSendService(){
-		return new MessageSendService(senderConfig.smsMessageSender());
-	}
 }
