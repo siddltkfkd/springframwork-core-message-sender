@@ -9,15 +9,13 @@ public class MessageSendService {
 
 	public MessageSendService(){}
 
-//	public MessageSendService(MessageSender messageSender){
-//		this.messageSender = messageSender;
-//	}
-//
 	public void doSendMessage(User user, String message){
 		messageSender.sendMessage(user, message);
 	}
 
-	public void setMessageSender(MessageSender messageSender) {
+	// setEmailMessageSender
+	// setSmsMessageSender
+	public void setEmailMessageSender(MessageSender messageSender) {
 		System.out.println("set messageSender invoked");
 		this.messageSender = messageSender;
 	}
