@@ -11,11 +11,15 @@ public class MessageSendService {
 
 	public MessageSendService(){}
 
-	@Autowired
-	public void setMessageSender(@Qualifier("smsMessageSender") MessageSender messageSender) {
-		System.out.println("set messageSender invoked");
+	public MessageSendService(MessageSender messageSender){
 		this.messageSender = messageSender;
 	}
+
+//	@Autowired
+//	public void setMessageSender(@Qualifier("emailMessageSender") MessageSender messageSender) {
+//		System.out.println("set messageSender invoked");
+//		this.messageSender = messageSender;
+//	}
 
 	public void doSendMessage(User user, String message){
 		messageSender.sendMessage(user, message);
