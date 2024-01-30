@@ -10,6 +10,7 @@ public class Main {
 			User user = new User("email@naver.com", "010-xxxx-xxxx");
 			MessageSendService service = context.getBean("messageSendService", MessageSendService.class);
 			service.doSendMessage(user, "hi");
+
 		}
 	}
 }

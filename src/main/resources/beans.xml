@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
        default-init-method="init" default-destroy-method="destroy">
 
+<!--annotation-config를 넣지 않으면 어노테이션 설정을 해도 동작하지 않는다.    -->
+    <context:annotation-config/>
 
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.sender.EmailMessageSender"
           scope="singleton" >
+        <qualifier type="com.nhnacademy.edu.springframework.annotation.SMS">
+            <attribute key="sendType" value="Email"/>
+        </qualifier>
     </bean>
 
     <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.sender.SmsMessageSender"
           scope="prototype">
+        <qualifier type="com.nhnacademy.edu.springframework.annotation.SMS">
+            <attribute key="sendType" value="SMS"/>
+        </qualifier>
     </bean>
-
-<!--    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService">-->
-<!--        <constructor-arg ref="smsMessageSender"/>-->
-<!--    </bean>-->
 
     <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService">
-        <property name="messageSender" ref="emailMessageSender"/>
     </bean>
-
 </beans>
