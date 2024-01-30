@@ -13,10 +13,6 @@
           scope="prototype">
     </bean>
 
-<!--    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService">-->
-<!--        <constructor-arg ref="smsMessageSender"/>-->
-<!--    </bean>-->
-
     <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService">
         <property name="messageSender" ref="emailMessageSender"/>
     </bean>
