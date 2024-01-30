@@ -1,5 +1,6 @@
 package com.nhnacademy.edu.springframework.config;
 
+import com.nhnacademy.edu.springframework.sender.EmailMessageSender;
 import com.nhnacademy.edu.springframework.sender.MessageSender;
 import com.nhnacademy.edu.springframework.sender.SmsMessageSender;
 import org.springframework.context.annotation.Bean;
@@ -12,5 +13,9 @@ public class MainConfig {
 	@Bean("smsMessageSender")
 	public MessageSender smsMessageSender() {
 		return new SmsMessageSender();
+	}
+	@Bean("emailMessageSender")
+	public MessageSender emailMessage() {
+		return new EmailMessageSender();
 	}
 }
