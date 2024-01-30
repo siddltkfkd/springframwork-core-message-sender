@@ -11,14 +11,14 @@
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.sender.EmailMessageSender"
           scope="singleton" >
         <qualifier type="com.nhnacademy.edu.springframework.annotation.SMS">
-            <attribute key="sendType" value="Email"/>
+            <attribute key="sendtype" value="Email"/>
         </qualifier>
     </bean>
 
     <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.sender.SmsMessageSender"
           scope="prototype">
         <qualifier type="com.nhnacademy.edu.springframework.annotation.SMS">
-            <attribute key="sendType" value="SMS"/>
+            <attribute key="sendtype" value="SMS"/>
         </qualifier>
     </bean>
 
