@@ -2,13 +2,17 @@ package com.nhnacademy.edu.springframework.service;
 
 import com.nhnacademy.edu.springframework.domain.User;
 import com.nhnacademy.edu.springframework.sender.MessageSender;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 // usecase를 담당 (메시지를 보낸다)
 public class MessageSendService {
 	private MessageSender messageSender;
 
 	public MessageSendService(){}
-	public void setMessageSender(MessageSender messageSender) {
+
+	@Autowired
+	public void setMessageSender(@Qualifier("smsMessageSender") MessageSender messageSender) {
 		System.out.println("set messageSender invoked");
 		this.messageSender = messageSender;
 	}
