@@ -15,6 +15,8 @@ public class MessageSendService {
 	private MessageSender messageSender;
 	@Value("${phoneNumber}")
 	private String phoneNumber;
+	@Value("${email}")
+	private String email;
 
 	public MessageSendService(){}
 
@@ -28,6 +30,7 @@ public class MessageSendService {
 
 	public void doSendMessage(User user, String message){
 		user.setPhoneNumber(phoneNumber);
+		user.setEmail(email);
 		//서버, 타겟 : messageSender
 		messageSender.sendMessage(user, message);
 	}

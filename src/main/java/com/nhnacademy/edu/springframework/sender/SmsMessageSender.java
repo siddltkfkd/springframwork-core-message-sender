@@ -9,8 +9,9 @@ public class SmsMessageSender implements MessageSender {
 		System.out.println("created "+ this.getClass().getSimpleName());
 	}
 	@Override
-	public void sendMessage(User user, String message) {
+	public boolean sendMessage(User user, String message) {
 		System.out.println("SMS message Sender : " + user.getPhoneNumber() + ", message : "  + message);
+		return true;
 	}
 	private void init(){
 		System.out.println("init " + this.getClass().getSimpleName());

@@ -9,8 +9,9 @@ public class EmailMessageSender implements MessageSender {
 		System.out.println("created "+ this.getClass().getSimpleName());
 	}
 	@Override
-	public void sendMessage(User user, String message) {
+	public boolean sendMessage(User user, String message) {
 		System.out.println("Email message Sender : " + user.getEmail() + ", message : " + message);
+		return true;
 	}
 
 	private void init(){
