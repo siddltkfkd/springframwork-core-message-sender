@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 // usecase를 담당 (메시지를 보낸다)
 @Service
+// 클라이언트 : MessageSendService(클래스)
 public class MessageSendService {
 	private MessageSender messageSender;
 	@Value("${phoneNumber}")
@@ -27,8 +28,7 @@ public class MessageSendService {
 
 	public void doSendMessage(User user, String message){
 		user.setPhoneNumber(phoneNumber);
+		//서버, 타겟 : messageSender
 		messageSender.sendMessage(user, message);
 	}
-
-
 }

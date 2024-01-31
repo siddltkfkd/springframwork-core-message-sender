@@ -5,5 +5,6 @@ import org.springframework.context.annotation.*;
 @Configuration
 @ComponentScan(basePackages = "com.nhnacademy.edu.springframework")
 @PropertySource("classpath:user.properties")
+@EnableAspectJAutoProxy
 public class JavaConfig {
 }

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d5d35d9-1e95-4287-aa7b-50252aec510e" name="변경" comment="java-configuration-with-dependency-injection&#10;&#10;config파일들 내용 삭제.&#10;빈들에 어노테이션을 붙여서 찾도록 하기">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/config/SenderConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/config/JavaConfig.java" afterDir="false" />
+    <list default="true" id="2d5d35d9-1e95-4287-aa7b-50252aec510e" name="변경" comment="java-configuration-with-dependency-injection&#10;&#10;context scan 설정 변경(Main.class)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/aspect/LoggingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/config/JavaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/config/JavaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/service/MessageSendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/springframework/service/MessageSendService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +33,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "siddltkfkd"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;siddltkfkd&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
@@ -84,7 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Profiler#1",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -120,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.springframework.Main" />
       <module name="springframework-core-message-sender" />
       <extension name="coverage">
@@ -148,7 +150,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.XmlMain" />
         <item itemvalue="Application.InjectionMain" />
       </list>
@@ -170,6 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706492834525</updated>
       <workItem from="1706492835609" duration="11731000" />
+      <workItem from="1706660618405" duration="7006000" />
     </task>
     <task id="LOCAL-00001" summary="autowired-value">
       <option name="closed" value="true" />
@@ -243,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706597156031</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="java-configuration-with-dependency-injection&#10;&#10;context scan 설정 변경(Main.class)">
+      <option name="closed" value="true" />
+      <created>1706598695576</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706598695576</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +280,7 @@
     <MESSAGE value="java-configuration-with-dependency-injection&#10;&#10;beans.xml 삭제&#10;@ComponentScan으로 교체" />
     <MESSAGE value="java-configuration-with-dependency-injection&#10;&#10;properties 설정 값 PropertySource로 가져오기" />
     <MESSAGE value="java-configuration-with-dependency-injection&#10;&#10;config파일들 내용 삭제.&#10;빈들에 어노테이션을 붙여서 찾도록 하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="java-configuration-with-dependency-injection&#10;&#10;config파일들 내용 삭제.&#10;빈들에 어노테이션을 붙여서 찾도록 하기" />
+    <MESSAGE value="java-configuration-with-dependency-injection&#10;&#10;context scan 설정 변경(Main.class)" />
+    <option name="LAST_COMMIT_MESSAGE" value="java-configuration-with-dependency-injection&#10;&#10;context scan 설정 변경(Main.class)" />
   </component>
 </project>
