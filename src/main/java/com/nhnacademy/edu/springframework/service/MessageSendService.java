@@ -1,6 +1,5 @@
 package com.nhnacademy.edu.springframework.service;
 
-import com.nhnacademy.edu.springframework.domain.User;
 import com.nhnacademy.edu.springframework.sender.MessageSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ public class MessageSendService {
 
 	public MessageSendService(){}
 
-	public void doSendMessage(User user, String message){
-		messageSender.sendMessage(user, message);
+	public void doSendMessage(String name, String message){
+		messageSender.sendMessage(name, message);
 	}
 }
