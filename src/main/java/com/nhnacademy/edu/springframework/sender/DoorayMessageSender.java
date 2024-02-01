@@ -6,14 +6,14 @@ import com.nhnacademy.edu.springframework.annotation.Dooray;
 import com.nhnacademy.edu.springframework.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile({"dooray", "default"})
 public class DoorayMessageSender implements MessageSender{
 	@Autowired
 	DoorayHookSender doorayHookSender;
-	@Value("${hookUrl}")
-	String hookUrl;
 	@Value("${name}")
 	private String name;
 	@Value("${message}")
@@ -23,7 +23,6 @@ public class DoorayMessageSender implements MessageSender{
 	@Override
 	@Dooray
 	public boolean sendMessage(User user, String message) {
-
 		doorayHookSender
 				.send(DoorayHook.builder()
 						.botName(name)

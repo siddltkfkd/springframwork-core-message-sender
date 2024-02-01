@@ -8,6 +8,4 @@ public class JavaPointCut {
 	public void sendMessage(){};
 	@Pointcut("execution(* com.nhnacademy.edu.springframework.sender.DoorayMessageSender.sendMessage(..))")
 	public void dooraySendMessage(){};
-	@Pointcut("args(com.nhnacademy.edu.springframework.domain.User, String)")
-	public void sendMessageArgs(){};
 }

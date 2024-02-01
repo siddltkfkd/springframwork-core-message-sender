@@ -1,6 +1,8 @@
 package com.nhnacademy.edu.springframework.domain;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
 	private String email;
 	private String phoneNumber;
 	public User(String email, String phoneNumber){
@@ -22,5 +24,13 @@ public class User {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"email='" + email + '\'' +
+				", phoneNumber='" + phoneNumber + '\'' +
+				'}';
 	}
 }
